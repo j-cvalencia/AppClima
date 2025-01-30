@@ -1,0 +1,67 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  height: 100vh;
+  background-image: url('./assets/fondo.jpg');
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contenedor{
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 20px;
+  width: 500px;
+  text-align: center;
+  color: white;
+  font-size: 1.2rem;
+  padding: 20px;
+}
+.contenedor form{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 15px 0;
+}
+input{
+  border: none;
+  border-bottom: 1px solid white;
+  color: white;
+  outline: none;
+  font-size: 1.4rem;
+  background-color: rgba(0, 0, 0, 0.0);
+  text-align: center;
+}
+button{
+  border: none;
+  font-size: 1.2rem;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: white;
+  transition: color 0.5s ,background-color 0.5s;
+}
+button:hover{
+  background-color: black;
+  color: white;
+}
+#clima{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.5rem;
+}
+#clima p{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+#clima span{
+  margin-left: 5px;
+}
+#clima h2{
+  font-size: 2.2rem;
+}
