@@ -28,30 +28,32 @@ const App = () => {
   };
 
   return (
-    <div className="contenedor">
-      <h1>App del Clima</h1>
-      <form onSubmit={handleSubmit}>
-        <input type="text" value={ciudad} onChange={handleCambioCiudad} />
-        <button type="submit">Buscar</button>
-      </form>
-      {datosClima && (
-        <div id="clima">
-          <h2>{datosClima.name}</h2>
-          <img
-            src={`https://openweathermap.org/img/wn/${datosClima.weather[0].icon}@2x.png`}
-          />
-          <p>
-            Temperatura: 
-            <span>
-              {parseInt(datosClima?.main?.temp - convertirACelsius)}ºC
-            </span>
-          </p>
-          <p>
-            Condición meteorológica:
-            <span>{datosClima.weather[0].description}</span>
-          </p>
-        </div>
-      )}
+    <div id="fondo">
+      <div className="contenedor">
+        <h1>App del Clima</h1>
+        <form onSubmit={handleSubmit}>
+          <input type="text" value={ciudad} onChange={handleCambioCiudad} />
+          <button type="submit">Buscar</button>
+        </form>
+        {datosClima && (
+          <div id="clima">
+            <h2>{datosClima.name}</h2>
+            <img
+              src={`https://openweathermap.org/img/wn/${datosClima.weather[0].icon}@2x.png`}
+            />
+            <p>
+              Temperatura: 
+              <span>
+                {parseInt(datosClima?.main?.temp - convertirACelsius)}ºC
+              </span>
+            </p>
+            <p>
+              Condición meteorológica:
+              <span>{datosClima.weather[0].description}</span>
+            </p>
+          </div>
+        )}
+      </div>
     </div>
   );
 };

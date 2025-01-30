@@ -7,9 +7,14 @@
 body {
   height: 100vh;
   width: 100%;
+}
+
+#fondo{
+  height: 100vh;
+  width: 100%;
   background-image: url('./assets/fondo.jpg');
   background-size: cover;
-  background-position: center;
+  background-position: top;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -18,8 +23,8 @@ body {
 .contenedor {
   background-color: rgba(0, 0, 0, 0.7);
   border-radius: 20px;
-  width: 90%;
-  max-width: 400px;
+  width: 50%;
+  max-width: 650px;
   text-align: center;
   color: white;
   font-size: 1.2rem;
@@ -88,10 +93,10 @@ button:hover {
   font-size: 2.2rem;
 }
 
-@media (max-width: 498px) {
+@media (max-width: 854px) {
   .contenedor {
-    width: 95%;
-    padding: 15px;
+    width: 90%;
+    padding: 10px;
   }
 
   input {
