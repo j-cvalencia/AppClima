@@ -3,7 +3,7 @@ import "./App.css";
 
 const App = () => {
   const urlBase = "https://api.openweathermap.org/data/2.5/weather";
-  const claveApi = "c43fc3b8b9a79416c7c175b3d1bf3478";
+  const claveApi = "8380b7895100847cb1187acc2cef6821";
   const convertirACelsius = 273.15;
 
   const [ciudad, setCiudad] = useState("");
@@ -19,7 +19,7 @@ const App = () => {
 
   const fetchClima = async () => {
     try {
-      const response = await fetch(`${urlBase}?q=${ciudad}&appid=${claveApi}`);
+      const response = await fetch(`${urlBase}?q=${ciudad}&appid=${claveApi}&lang=es`);
       const datos = await response.json();
       setDatosClima(datos);
     } catch (error) {
